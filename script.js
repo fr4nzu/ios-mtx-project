@@ -74,8 +74,14 @@ let data = [
     const offset = element.offsetLeft;
     const width = element.offsetWidth;
     // 1px inner padding constraint
-    pill.style.width = (width - 2) + 'px';
-    pill.style.transform = `translateX(${offset + 1}px)`;
+    const calc_width = width - 2;
+    if (calc_width >= 50) {
+      pill.style.width = calc_width + 'px';
+      pill.style.transform = `translateX(${offset + 1}px)`;
+    } else {
+      pill.style.width = '60px';
+      pill.style.transform = `translateX(${offset - 13}px)`;
+    }
     document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
     element.classList.add('active');
   }

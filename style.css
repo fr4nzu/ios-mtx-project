@@ -234,13 +234,12 @@
     backdrop-filter: blur(2px) saturate(1.1);
     border-radius: 25px;
     padding: 4px;
+    padding-right: 32px;
     border: 1px solid var(--glass-border);
-    box-shadow: 
-      inset 0 1px 0 rgba(255,255,255,0.25),
-      inset 0 -1px 0 rgba(0,0,0,0.05),
-      0 2px 12px rgba(0,0,0,0.12);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.05), 0 2px 12px rgba(0, 0, 0, 0.12);
     overflow: hidden;
     isolation: isolate;
+    justify-content: space-between;
   }
   .glass-nav::before {
     content: '';
@@ -254,20 +253,16 @@
   }
   .glider {
     position: absolute;
-    height: calc(100% - 8px);
+    height: calc(100% - 6px);
     background: #ffffff19;
     backdrop-filter: blur(2px) saturate(2);
-    -webkit-backdrop-filter: blur(2px) saturate(2);
     border-radius: 20px;
     z-index: 1;
     transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1), width 0.3s;
-    top: 4px;
+    top: 3px;
     left: 0;
-    border: 1px solid rgba(255,255,255,0.08);
-    box-shadow: 
-      inset 0 1px 0 rgba(255,255,255,0.15),
-      inset 0 -1px 0 rgba(0,0,0,0.05),
-      0 2px 8px rgba(0,0,0,0.15);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.05), 0 2px 8px rgba(0, 0, 0, 0.15);
     overflow: hidden;
     isolation: isolate;
   }
@@ -288,10 +283,11 @@
     background: none;
     border: none;
     color: #ffffff;
-    flex: 1;
-    padding: 10px 0;
+    flex: 0 1 auto;
+    min-width: fit-content;
+    padding: 10px 4px;
     font-family: var(--font-text);
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 500;
     cursor: pointer;
     transition: color 0.3s ease;
@@ -411,7 +407,7 @@
   .type-buy {
     font-family: var(--font-text);
     color: var(--blue-color);
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 500;
     letter-spacing: 0;
     text-transform: lowercase;
@@ -419,7 +415,7 @@
   .type-sell {
     font-family: var(--font-text);
     color: var(--red-color);
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 500;
     letter-spacing: 0;
     text-transform: lowercase;
@@ -460,7 +456,7 @@
   }
   .sum-row span:first-child {
     font-family: var(--font-text);
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 500;
     color: var(--text-active);
   }
@@ -526,11 +522,10 @@
   }
   .bottom-nav-item.active {
     color: #1aaeff;
-    border-radius: 30px;
+    border-radius: 70% / 100%;
     background: #3a3a3a;
   }
   .custom-icon {
-    width: 26px;
     height: 26px;
   }
   
