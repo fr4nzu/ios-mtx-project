@@ -1,5 +1,19 @@
 /* --- EXACT LOCAL FONT MAPPING --- */
-/* SF Pro Display (For Numbers, Prices, Balance, Time) */
+/* Roboto Condensed (For English text and numerals) */
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: local('Roboto Condensed'), url('fonts/Roboto_Condensed-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Roboto Condensed';
+    src: local('Roboto Condensed'), url('fonts/Roboto_Condensed-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+  }
+
+/* SF Pro Display (For Japanese text) */
 @font-face {
     font-family: 'SF Pro Display';
     src: local('SF Pro Display'), url('fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
@@ -8,47 +22,21 @@
   }
   @font-face {
     font-family: 'SF Pro Display';
-    src: local('SF Pro Display'), url('fonts/SFPRODISPLAYMEDIUM.OTF') format('opentype');
-    font-weight: 500;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'SF Pro Display';
-    src: local('SF Pro Display'), url('fonts/SFPRODISPLAYBOLD.OTF') format('opentype');
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  /* SF Pro Text (For Labels, UI Text) */
-  @font-face {
-    font-family: 'SF Pro Text';
-    src: local('SF Pro Text'), url('fonts/SF-Pro-Text-Regular.otf') format('opentype');
+    src: local('SF Pro Display'), url('fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
     font-weight: 400;
     font-style: normal;
   }
   @font-face {
-    font-family: 'SF Pro Text';
-    src: local('SF Pro Text'), url('fonts/SF-Pro-Text-Medium.otf') format('opentype');
-    font-weight: 500;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'SF Pro Text';
-    src: local('SF Pro Text'), url('fonts/SF-Pro-Text-Semibold.otf') format('opentype');
-    font-weight: 600;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'SF Pro Text';
-    src: local('SF Pro Text'), url('fonts/SF-Pro-Text-Bold.otf') format('opentype');
-    font-weight: 700;
+    font-family: 'SF Pro Display';
+    src: local('SF Pro Display'), url('fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
+    font-weight: 400;
     font-style: normal;
   }
   
   :root {
     /* Core System Font Stacks */
-    --font-text: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Hiragino Sans", "Helvetica Neue", sans-serif;
-    --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Hiragino Sans", "Helvetica Neue", sans-serif;
+    --font-text: "Roboto Condensed", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Helvetica Neue", sans-serif;
+    --font-display: "Roboto Condensed", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Helvetica Neue", sans-serif;
     
     /* Colors */
     --bg-black: #000000;
@@ -61,6 +49,7 @@
     --blue-color: #0a84ff;
     --red-color: #ff453a;
     --grey-text: #A0A0A0;
+    --glass-generic: linear-gradient(135deg, #2d2d2d8a 0%, #2d2d2d8a 5%, #2d2d2d8a 10%);
   }
   
   #mt5-app-wrapper {
@@ -197,7 +186,7 @@
     height: 44px;
     border-radius: 50%;
     flex-shrink: 0;
-    background: linear-gradient(135deg, #181818df 0%, #181818b6 5%, #181818b6 10%);
+    background: var(--glass-generic);
     backdrop-filter: blur(2px) saturate(3.5);
     border: 1px solid var(--glass-border);
     display: flex;
@@ -241,7 +230,7 @@
     position: relative;
     display: flex;
     flex: 1;
-    background: linear-gradient(135deg, #181818df 0%, #181818b6 5%, #181818b6 10%);
+    background: var(--glass-generic);
     backdrop-filter: blur(2px) saturate(1.1);
     border-radius: 25px;
     padding: 4px;
@@ -266,7 +255,7 @@
   .glider {
     position: absolute;
     height: calc(100% - 8px);
-    background: linear-gradient(135deg, rgba(50,50,55,0.7) 0%, rgba(35,35,40,0.5) 100%);
+    background: #ffffff19;
     backdrop-filter: blur(2px) saturate(2);
     -webkit-backdrop-filter: blur(2px) saturate(2);
     border-radius: 20px;
@@ -333,6 +322,16 @@
       rgba(0,0,0,0.4) calc(100% - 40px),
       rgba(0,0,0,0.05) 100%
     );
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0.05) 40px,
+      rgba(0,0,0,0.4) 60px,
+      rgba(0,0,0,1) 105px,
+      rgba(0,0,0,1) calc(100% - 90px),
+      rgba(0,0,0,0.4) calc(100% - 40px),
+      rgba(0,0,0,0.05) 100%
+    );
   }
   .trade-list-container::-webkit-scrollbar {
     display: none;
@@ -343,7 +342,7 @@
   }
   
   .row-item {
-    padding: 9px 16px;
+    padding: 9px 8px;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -517,8 +516,8 @@
     font-family: var(--font-text);
     font-size: 10px;
     font-weight: 500;
-    width: 72px;
-    height: 56px;
+    width: 76px;
+    height: 60px;
     border-radius: 20px;
     cursor: pointer;
     position: relative;
@@ -526,9 +525,9 @@
     color: var(--text-inactive);
   }
   .bottom-nav-item.active {
-    color: var(--blue-color);
+    color: #1aaeff;
     border-radius: 30px;
-    background: rgba(70, 70, 75, 0.4);
+    background: #3a3a3a;
   }
   .custom-icon {
     width: 26px;
