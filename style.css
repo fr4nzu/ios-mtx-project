@@ -52,10 +52,10 @@
     
     /* Colors */
     --bg-black: #000000;
-    --glass-bright: rgba(255, 255, 255, 0.18); 
-    --glass-dark: rgba(30, 30, 30, 0.4); 
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --pill-highlight: rgba(255, 255, 255, 0.25); 
+    --glass-bright: rgba(255, 255, 255, 0.42);
+    --glass-dark: rgba(40, 40, 45, 0.55);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --pill-highlight: rgba(255, 255, 255, 0.28);
     --text-active: #ffffff;
     --text-inactive: #ffffff; 
     --blue-color: #0a84ff;
@@ -197,9 +197,8 @@
     height: 44px;
     border-radius: 50%;
     flex-shrink: 0;
-    background: var(--glass-bright);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    background: linear-gradient(135deg, #181818df 0%, #181818b6 5%, #181818b6 10%);
+    backdrop-filter: blur(2px) saturate(3.5);
     border: 1px solid var(--glass-border);
     display: flex;
     align-items: center;
@@ -207,6 +206,10 @@
     cursor: pointer;
     padding: 0;
     color: #ffffff;
+    box-shadow: 
+      inset 0 1px 0 rgba(255,255,255,0.25),
+      inset 0 -1px 0 rgba(0,0,0,0.05),
+      0 2px 8px rgba(0,0,0,0.15);
   }
   .icon-unit:active {
     opacity: 0.7;
@@ -225,12 +228,15 @@
     position: relative;
     display: flex;
     flex: 1;
-    background: var(--glass-bright);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    background: linear-gradient(135deg, #181818df 0%, #181818b6 5%, #181818b6 10%);
+    backdrop-filter: blur(2px) saturate(1.1);
     border-radius: 25px;
     padding: 4px;
     border: 1px solid var(--glass-border);
+    box-shadow: 
+      inset 0 1px 0 rgba(255,255,255,0.25),
+      inset 0 -1px 0 rgba(0,0,0,0.05),
+      0 2px 12px rgba(0,0,0,0.12);
   }
   .glider {
     position: absolute;
@@ -433,14 +439,17 @@
     z-index: 200;
     height: 70px;
     border-radius: 35px;
-    background: var(--glass-dark);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: linear-gradient(180deg, rgba(55,55,60,0.65) 0%, rgba(35,35,40,0.5) 100%);
+    backdrop-filter: blur(2px) saturate(3.5);
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 0 10px;
     border: 1px solid var(--glass-border);
+    box-shadow: 
+      inset 0 1px 0 rgba(255,255,255,0.12),
+      inset 0 -1px 0 rgba(0,0,0,0.1),
+      0 4px 20px rgba(0,0,0,0.25);
   }
   .bottom-nav-item {
     display: flex;
@@ -451,7 +460,7 @@
     font-family: var(--font-text);
     font-size: 10px;
     font-weight: 500;
-    width: 60px;
+    width: 72px;
     height: 56px;
     border-radius: 20px;
     cursor: pointer;
@@ -461,6 +470,7 @@
   }
   .bottom-nav-item.active {
     color: var(--blue-color);
+    border-radius: 30px;
     background: rgba(70, 70, 75, 0.4);
   }
   .custom-icon {
