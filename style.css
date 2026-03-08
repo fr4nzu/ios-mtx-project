@@ -210,6 +210,19 @@
       inset 0 1px 0 rgba(255,255,255,0.25),
       inset 0 -1px 0 rgba(0,0,0,0.05),
       0 2px 8px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .icon-unit::before {
+    content: '';
+    position: absolute;
+    background: inherit;
+    transform: scale(2);
+    filter: blur(0px) saturate(2);
+    z-index: -1;
+    opacity: 0.5;
+    border-radius: 50%;
   }
   .icon-unit:active {
     opacity: 0.7;
@@ -237,16 +250,48 @@
       inset 0 1px 0 rgba(255,255,255,0.25),
       inset 0 -1px 0 rgba(0,0,0,0.05),
       0 2px 12px rgba(0,0,0,0.12);
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .glass-nav::before {
+    content: '';
+    position: absolute;
+    background: inherit;
+    transform: scale(2);
+    filter: saturate(1.5);
+    z-index: -1;
+    opacity: 0.5;
+    border-radius: 30px;
   }
   .glider {
     position: absolute;
     height: calc(100% - 8px);
-    background: var(--pill-highlight);
+    background: linear-gradient(135deg, rgba(50,50,55,0.7) 0%, rgba(35,35,40,0.5) 100%);
+    backdrop-filter: blur(2px) saturate(2);
+    -webkit-backdrop-filter: blur(2px) saturate(2);
     border-radius: 20px;
     z-index: 1;
     transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1), width 0.3s;
     top: 4px;
     left: 0;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 
+      inset 0 1px 0 rgba(255,255,255,0.15),
+      inset 0 -1px 0 rgba(0,0,0,0.05),
+      0 2px 8px rgba(0,0,0,0.15);
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .glider::before {
+    content: '';
+    position: absolute;
+    inset: -20%;
+    background: inherit;
+    transform: scale(2);
+    filter: saturate(1.5);
+    z-index: -1;
+    opacity: 0.1;
+    border-radius: 25px;
   }
   .nav-btn {
     position: relative;
@@ -450,6 +495,18 @@
       inset 0 1px 0 rgba(255,255,255,0.12),
       inset 0 -1px 0 rgba(0,0,0,0.1),
       0 4px 20px rgba(0,0,0,0.25);
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .bottom-floating-pill::before {
+    content: '';
+    position: absolute;
+    background: inherit;
+    transform: scale(2);
+    filter: saturate(2);
+    z-index: -1;
+    opacity: 0.5;
+    border-radius: 45px;
   }
   .bottom-nav-item {
     display: flex;
