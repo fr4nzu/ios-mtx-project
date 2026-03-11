@@ -22,14 +22,14 @@
   }
   @font-face {
     font-family: 'SF Pro Display';
-    src: local('SF Pro Display'), url('fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
-    font-weight: 400;
+    src: local('SF Pro Display'), url('fonts/SFPRODISPLAYMEDIUM.OTF') format('opentype');
+    font-weight: 500;
     font-style: normal;
   }
   @font-face {
     font-family: 'SF Pro Display';
-    src: local('SF Pro Display'), url('fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
-    font-weight: 400;
+    src: local('SF Pro Display'), url('fonts/SFPRODISPLAYBOLD.OTF') format('opentype');
+    font-weight: 700;
     font-style: normal;
   }
   
@@ -288,16 +288,13 @@
     padding: 10px 4px;
     font-family: var(--font-text);
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 400;
     cursor: pointer;
     transition: color 0.3s ease;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .nav-btn.active {
-    font-weight: 700;
   }
   
   /* -------------------------------- */
@@ -455,9 +452,9 @@
     margin-bottom: 6px;
   }
   .sum-row span:first-child {
-    font-family: var(--font-text);
-    font-size: 15px;
-    font-weight: 500;
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 100;
     color: var(--text-active);
   }
   .sum-row span:last-child {

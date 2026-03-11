@@ -42,7 +42,7 @@ let data = [
           <div class="row-item ${t.bar}" onclick="openEdit(${t.id})">
             <div class="side-bar"></div>
             <div class="col-left">
-              <div class="title-main">${t.sym} <span class="${tColor}">${t.type} ${t.lot}</span></div>
+              <div class="title-main">${t.sym} <span class="${tColor}">${t.type} <span style="font-weight:600;">${t.lot}</span></span></div>
               <div class="sub-text" id="prc-${t.id}">${t.entry} → ${t.close}</div>
             </div>
             <div class="col-right">
