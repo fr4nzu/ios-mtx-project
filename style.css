@@ -484,7 +484,7 @@
   /* -------------------------------- */
   .bottom-floating-pill {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     left: 20px;
     right: 20px;
     z-index: 200;
