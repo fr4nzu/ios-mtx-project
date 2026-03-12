@@ -240,6 +240,7 @@
     position: relative;
     display: flex;
     flex: 1;
+    height: 100%;
     background: var(--glass-generic);
     backdrop-filter: blur(2px) saturate(1.1);
     border-radius: 25px;
