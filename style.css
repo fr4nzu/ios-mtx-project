@@ -58,38 +58,39 @@
     --glass-generic: linear-gradient(135deg, #2d2d2d8a 0%, #2d2d2d8a 5%, #2d2d2d8a 10%);
   }
   
-  #mt5-app-wrapper {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #ffcfcf;
-    width: 100%;
-    height: 100vh;
-    height: 100dvh;
-    
-  }
-  #mt5-app-wrapper * {
-    box-sizing: border-box;
-  }
-  
-  #mt5-app {
-    width: 100%;
-    max-width: 430px;
-    height: 100vh;
-    height: 100dvh;
-    margin: 0 auto;
-    background-color: var(--bg-black);
-    color: var(--text-active);
-    font-family: var(--font-text) !important;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    overflow: hidden;
-  }
+ #mt5-app-wrapper {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  background: #000;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+#mt5-app-wrapper * {
+  box-sizing: border-box;
+}
+
+#mt5-app {
+  width: 100%;
+  max-width: 430px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  height: 100dvh;
+  margin: 0 auto;
+  background-color: var(--bg-black);
+  color: var(--text-active);
+  font-family: var(--font-text) !important;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
   
   /* -------------------------------- */
   /* iOS STATUS BAR                   */
