@@ -189,9 +189,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 12px;
+    padding: 5px 15px;
     gap: 10px;
-    /* background: transparent; */
+    background: transparent;
 
   }
   .icon-unit {
@@ -342,6 +342,7 @@
       rgba(0,0,0,0.4) calc(100% - 40px),
       rgba(0,0,0,0.05) 100%
     );
+    
   }
   .trade-list-container::-webkit-scrollbar {
     display: none;
@@ -352,7 +353,7 @@
   }
   
   .row-item {
-    padding: 9px 8px;
+    padding: 9px 5px;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -422,7 +423,7 @@
     font-family: var(--font-text);
     color: var(--blue-color);
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0;
     text-transform: lowercase;
   }
@@ -430,7 +431,7 @@
     font-family: var(--font-text);
     color: var(--red-color);
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0;
     text-transform: lowercase;
   }
