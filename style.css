@@ -187,7 +187,7 @@
   /* -------------------------------- */
   .top-nav-container {
     position: absolute;
-    top: 42px;
+    top: 20px;
     left: 0;
     right: 0;
     z-index: 200;
@@ -437,7 +437,7 @@
     color: var(--blue-color);
     font-size: 16px;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 0.2px;
     text-transform: lowercase;
   }
   .type-sell {
@@ -445,7 +445,7 @@
     color: var(--red-color);
     font-size: 16px;
     font-weight: 700;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.2px;
     text-transform: lowercase;
   }
   
