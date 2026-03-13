@@ -1,14 +1,14 @@
 let data = [
-    { id: 1, sym: 'EURUSD#', type: 'sell', lot: '0.1', entry: '182.930', close: '182.962', time: '2026.03.03 13:21:47', profit: -20, bar: 'sl' },
-    { id: 2, sym: 'GOLD#', type: 'sell', lot: '0.1', entry: '5206.56', close: '5183.98', time: '2026.03.03 13:25:00', profit: 35665, bar: 'none' },
-    { id: 3, sym: 'GOLD#', type: 'sell', lot: '0.05', entry: '5203.05', close: '5183.98', time: '2026.03.03 13:25:00', profit: 15061, bar: 'tp' },
-    { id: 4, sym: 'USDJPY#', type: 'buy', lot: '0.05', entry: '157.618', close: '157.617', time: '2026.03.04 02:56:39', profit: -5, bar: 'none' },
-    { id: 5, sym: 'USDJPY#', type: 'buy', lot: '0.1', entry: '157.603', close: '157.617', time: '2026.03.04 02:56:39', profit: 140, bar: 'none' },
-    { id: 6, sym: 'USDJPY#', type: 'buy', lot: '0.1', entry: '157.610', close: '157.617', time: '2026.03.04 02:56:39', profit: 70, bar: 'none' },
-    { id: 7, sym: 'USDJPY#', type: 'buy', lot: '0.1', entry: '157.619', close: '157.617', time: '2026.03.04 02:56:39', profit: -20, bar: 'none' },
-    { id: 8, sym: 'USDJPY#', type: 'buy', lot: '0.1', entry: '157.619', close: '157.617', time: '2026.03.04 02:56:39', profit: -20, bar: 'none' },
-    { id: 9, sym: 'USDJPY#', type: 'buy', lot: '0.1', entry: '157.619', close: '157.617', time: '2026.03.04 02:56:39', profit: -20, bar: 'none' },
-    { id: 10, sym: 'USDJPY#', type: 'buy', lot: '0.1', entry: '157.618', close: '157.617', time: '2026.03.04 02:56:39', profit: -10, bar: 'none' }
+    { id: 1, sym: 'EURUSD',bol: '#', type: 'sell', lot: '0.1', entry: '182.930', close: '182.962', time: '2026.03.03 13:21:47', profit: -20, bar: 'sl' },
+    { id: 2, sym: 'GOLD', bol: '#',type: 'sell', lot: '0.1', entry: '5206.56', close: '5183.98', time: '2026.03.03 13:25:00', profit: 35665, bar: 'none' },
+    { id: 3, sym: 'GOLD', bol: '#',type: 'sell', lot: '0.05', entry: '5203.05', close: '5183.98', time: '2026.03.03 13:25:00', profit: 15061, bar: 'tp' },
+    { id: 4, sym: 'USDJPY',bol: '#', type: 'buy', lot: '0.05', entry: '157.618', close: '157.617', time: '2026.03.04 02:56:39', profit: -5, bar: 'none' },
+    { id: 5, sym: 'USDJPY',bol: '#', type: 'buy', lot: '0.1', entry: '157.603', close: '157.617', time: '2026.03.04 02:56:39', profit: 140, bar: 'none' },
+    { id: 6, sym: 'USDJPY',bol: '#', type: 'buy', lot: '0.1', entry: '157.610', close: '157.617', time: '2026.03.04 02:56:39', profit: 70, bar: 'none' },
+    { id: 7, sym: 'USDJPY',bol: '#', type: 'buy', lot: '0.1', entry: '157.619', close: '157.617', time: '2026.03.04 02:56:39', profit: -20, bar: 'none' },
+    { id: 8, sym: 'USDJPY',bol: '#', type: 'buy', lot: '0.1', entry: '157.619', close: '157.617', time: '2026.03.04 02:56:39', profit: -20, bar: 'none' },
+    { id: 9, sym: 'USDJPY',bol: '#', type: 'buy', lot: '0.1', entry: '157.619', close: '157.617', time: '2026.03.04 02:56:39', profit: -20, bar: 'none' },
+    { id: 10, sym: 'USDJPY', bol: '#',type: 'buy', lot: '0.1', entry: '157.618', close: '157.617', time: '2026.03.04 02:56:39', profit: -10, bar: 'none' }
   ];
   
   function formatNum(num) {
@@ -27,7 +27,7 @@ let data = [
           <div class="row-item ${t.bar}" onclick="openEdit(${t.id})">
             <div class="side-bar"></div>
             <div class="col-left">
-              <div class="title-main">${t.sym}</div>
+              <div class="title-main">${t.sym}<span class="hash">${t.bol}</span></div>
               <div class="sub-text">${t.sub}</div>
             </div>
             <div class="col-right">
@@ -42,7 +42,7 @@ let data = [
           <div class="row-item ${t.bar}" onclick="openEdit(${t.id})">
             <div class="side-bar"></div>
             <div class="col-left">
-              <div class="title-main">${t.sym} <span class="${tColor}">${t.type} <span style="font-weight:600;">${t.lot}</span></span></div>
+              <div class="title-main">${t.sym}<span class="hash">${t.bol}</span> <span class="${tColor}">${t.type} <span style="font-weight:600;">${t.lot}</span></span></div>
               <div class="sub-text" id="prc-${t.id}">${t.entry} → ${t.close}</div>
             </div>
             <div class="col-right">
@@ -138,7 +138,8 @@ let data = [
     const newId = data.length > 0 ? Math.max(...data.map(d => d.id)) + 1 : 1;
     data.push({
       id: newId,
-      sym: 'NEW#',
+      sym: 'NEW',
+      bol: "#",
       type: 'buy',
       lot: '0.1',
       entry: '0.00',
