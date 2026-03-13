@@ -43,7 +43,7 @@
     /* Core System Font Stacks */
     --font-text: "Roboto Condensed", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Helvetica Neue", sans-serif;
     --font-display: "Roboto Condensed", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Helvetica Neue", sans-serif;
-    --font-text-jp: "SF Pro Display", "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Helvetica Neue", sans-serif;
+    --font-text-jp: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Roboto Condensed", "Hiragino Sans", "Helvetica Neue", sans-serif;
     
     /* Colors */
     --bg-black: #000000;
@@ -85,7 +85,7 @@
     margin: 0 auto;
     background-color: var(--bg-black);
     color: var(--text-active);
-    font-family: var(--font-text) !important;
+    font-family: var(--font-text);
     display: flex;
     flex-direction: column;
     position: relative;
@@ -469,13 +469,13 @@
     margin-bottom: 6px;
   }
   .sum-row span:first-child {
-    font-family: var(--font-display);
+    font-family: var(--font-text-jp);
     font-size: 14px;
     font-weight: 500;
     color: var(--text-active);
   }
   .sum-row span:last-child {
-    font-family: var(--font-display);
+    font-family: var(--font-text-jp);
     font-size: 17px;
     font-weight: 500;
     color: var(--text-active);
@@ -630,26 +630,27 @@
   .modal-overlay.active {
     display: flex;
   }
-  .modal-box {
-    font-family: var(--font-text-jp) !important;
+  .modal-box { 
+    font-family: var(--font-text);
     background: #1c1c1e;
-    border-radius: 12px;
-    width: 100%;
-    max-width: 350px;
-    padding: 20px;
-    max-height: 85vh;
-    overflow-y: auto;
-    color: #fff;
-  }
-  .modal-box input,
-  .modal-box select,
-  .modal-box option {
-    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif !important;
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: -0.2px;
-    font-variant-numeric: tabular-nums;
-  }
+    border-radius: 12px; 
+    width: 100%; 
+    max-width: 350px; 
+    padding: 20px; 
+    max-height: 85vh; 
+    overflow-y: auto; 
+    color: #fff; }
+  .modal-box input, 
+  .modal-box select { 
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 12px; 
+    background: #000; 
+    color: #fff; 
+    border: 1px solid #333; 
+    border-radius: 6px; 
+    font-size: 14px; 
+    font-family: inherit; }
 
   .modal-box label {
     display: block;
@@ -658,6 +659,7 @@
     margin-bottom: 5px;
     color: #8e8e93;
   }
+
   .flex-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
