@@ -41,8 +41,9 @@
   
   :root {
     /* Core System Font Stacks */
-    --font-text: "SF Pro Display", "Roboto Condensed", -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-display: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Roboto Condensed", "Hiragino Sans", "Helvetica Neue", sans-serif;
+    --font-text: "Roboto Condensed", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Helvetica Neue", sans-serif;
+    --font-display: "Roboto Condensed", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Helvetica Neue", sans-serif;
+    --font-text-jp: "SF Pro Display", "Roboto Condensed", -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Helvetica Neue", sans-serif;
     
     /* Colors */
     --bg-black: #000000;
@@ -164,8 +165,8 @@
     justify-content: center;
     font-family: var(--font-display);
     color: #000000;
-    font-size: 10px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 700;
     letter-spacing: 0.2px;
     z-index: 2;
     padding-top: 0.5px;
@@ -410,9 +411,9 @@
   
   /* Labels use Text, Numbers use Display and Tabular Nums */
   .title-main {
-    font-family: 'Roboto-Regular';
+    font-family: var(--font-display);
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text-active);
     display: flex;
     align-items: baseline;
@@ -420,7 +421,7 @@
     letter-spacing: -0.2px;
   }
   .type-buy {
-    font-family: 'Roboto-Regular';
+    font-family: var(--font-text);
     color: var(--blue-color);
     font-size: 16px;
     font-weight: 600;
@@ -428,7 +429,7 @@
     text-transform: lowercase;
   }
   .type-sell {
-    font-family: 'Roboto-Regular';
+    font-family: var(--font-text);
     color: var(--red-color);
     font-size: 16px;
     font-weight: 600;
@@ -444,7 +445,7 @@
   }
   
   .profit-val {
-    font-family: 'Roboto-Regular';
+    font-family: var(--font-display);
     font-size: 16px;
     font-weight: 600;
     letter-spacing: -0.2px;
@@ -630,7 +631,7 @@
     display: flex;
   }
   .modal-box {
-    font-family: var(--font-text);
+    font-family: var(--font-text-jp) !important;
     background: #1c1c1e;
     border-radius: 12px;
     width: 100%;
@@ -641,12 +642,15 @@
     color: #fff;
   }
   .modal-box input,
-  .modal-box select {
-    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 15px;
-    font-weight: 400;
+  .modal-box select,
+  .modal-box option {
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-size: 16px;
+    font-weight: 500;
     letter-spacing: -0.2px;
+    font-variant-numeric: tabular-nums;
   }
+
   .modal-box label {
     display: block;
     font-size: 12px;
