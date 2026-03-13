@@ -325,7 +325,7 @@
   .trade-list-container {
     height: 100vh;
     overflow-y: auto;
-    padding-top: 80px;
+    padding-top: 70px;
     padding-bottom: 0px;
     -webkit-mask-image: linear-gradient(
       to bottom,
@@ -447,6 +447,7 @@
     font-weight: 700;
     letter-spacing: 0.2px;
     text-transform: lowercase;
+    margin-left: -1px;
   }
   
   .sub-text {
