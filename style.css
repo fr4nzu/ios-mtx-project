@@ -187,7 +187,7 @@
   /* -------------------------------- */
   .top-nav-container {
     position: absolute;
-    top: 20px;
+    top: 10px;
     left: 0;
     right: 0;
     z-index: 200;
@@ -325,7 +325,7 @@
   .trade-list-container {
     height: 100vh;
     overflow-y: auto;
-    padding-top: 110px;
+    padding-top: 80px;
     padding-bottom: 0px;
     -webkit-mask-image: linear-gradient(
       to bottom,
