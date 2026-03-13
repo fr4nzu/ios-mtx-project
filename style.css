@@ -432,7 +432,7 @@
     font-family: var(--font-text);
     color: var(--red-color);
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 800;
     letter-spacing: 0;
     text-transform: lowercase;
   }
@@ -447,7 +447,7 @@
   .profit-val {
     font-family: var(--font-display);
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 800;
     letter-spacing: -0.2px;
     font-variant-numeric: tabular-nums;
   }
