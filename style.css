@@ -41,8 +41,8 @@
   
   :root {
     /* Core System Font Stacks */
-    --font-text: "Roboto Condensed", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Helvetica Neue", sans-serif;
-    --font-display: "Roboto Condensed", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Helvetica Neue", sans-serif;
+    --font-text: "SF Pro Display", "Roboto Condensed", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-display: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Roboto Condensed", "Hiragino Sans", "Helvetica Neue", sans-serif;
     
     /* Colors */
     --bg-black: #000000;
@@ -164,8 +164,8 @@
     justify-content: center;
     font-family: var(--font-display);
     color: #000000;
-    font-size: 12px;
-    font-weight: 700;
+    font-size: 10px;
+    font-weight: 600;
     letter-spacing: 0.2px;
     z-index: 2;
     padding-top: 0.5px;
@@ -412,7 +412,7 @@
   .title-main {
     font-family: var(--font-display);
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
     color: var(--text-active);
     display: flex;
     align-items: baseline;
@@ -431,7 +431,7 @@
     font-family: var(--font-text);
     color: var(--red-color);
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: 0;
     text-transform: lowercase;
   }
@@ -642,15 +642,10 @@
   }
   .modal-box input,
   .modal-box select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 12px;
-    background: #000;
-    color: #fff;
-    border: 1px solid #333;
-    border-radius: 6px;
-    font-size: 14px;
-    font-family: inherit;
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.2px;
   }
   .modal-box label {
     display: block;
@@ -664,6 +659,8 @@
     grid-template-columns: 1fr 1fr;
     gap: 10px;
   }
+
+
   .btn {
     width: 100%;
     padding: 12px;
