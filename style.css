@@ -195,8 +195,8 @@
 
   }
   .icon-unit {
-    width: 38px;
-    height: 38px;
+    width: 48px;
+    height: 45px;
     border-radius: 50%;
     flex-shrink: 0;
     background: var(--glass-generic);
@@ -412,7 +412,7 @@
   .title-main {
     font-family: var(--font-display);
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text-active);
     display: flex;
     align-items: baseline;
@@ -431,7 +431,7 @@
     font-family: var(--font-text);
     color: var(--red-color);
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0;
     text-transform: lowercase;
   }
