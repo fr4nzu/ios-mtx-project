@@ -431,8 +431,8 @@
     font-weight: 200;
     margin-left: -5px;
     letter-spacing: -1.5px;
-    transform: scaleY(1.1);
-    transform: skewY(-0.5deg);
+    transform: scaleY(1.05);
+    /* transform: skewY(-0.5deg); */
     
   }
 
