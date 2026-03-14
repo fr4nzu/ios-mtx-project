@@ -428,8 +428,12 @@
   .hash {
     font-family:  "Roboto Condensed", sans-serif;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 200;
     margin-left: -5px;
+    letter-spacing: -1.5px;
+    transform: scaleY(1.1);
+    transform: skewY(-0.5deg);
+    
   }
 
   .type-buy {
@@ -483,7 +487,7 @@
   }
   .sum-row span:first-child {
     font-family: var(--font-text-jp);
-    font-size: 14px;
+    font-size: 17px;
     font-weight: 500;
     color: var(--text-active);
   }
