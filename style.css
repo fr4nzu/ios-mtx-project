@@ -431,7 +431,7 @@
   font-weight: 300;
   margin-left: -6px;
   letter-spacing: -1.5px;
-  transform: scaleY(1.05) skewX(-1deg);
+  /* transform: scaleY(1.05) skewX(-1deg); */
   }
 
   .type-buy {
