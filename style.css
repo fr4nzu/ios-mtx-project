@@ -426,14 +426,12 @@
   }
 
   .hash {
-    font-family:  "Roboto Condensed", sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    margin-left: -6px;
-    letter-spacing: -1.5px;
-    transform: scaleY(1.05);
-    /* transform: skewY(-0.5deg); */
-    
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin-left: -6px;
+  letter-spacing: -1.5px;
+  transform: scaleY(1.05) skewX(-1deg);
   }
 
   .type-buy {
